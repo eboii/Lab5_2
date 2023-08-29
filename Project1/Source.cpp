@@ -13,7 +13,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
         // Check for the ESC key and exit if pressed
         if (keycode == VK_ESCAPE) {
             UnhookWindowsHookEx(hHook);
-            PostQuitMessage(0); // This will signal the message loop to exit
+            PostQuitMessage(0); 
         }
     }
     return CallNextHookEx(NULL, nCode, wParam, lParam);
